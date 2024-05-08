@@ -2,16 +2,21 @@ import React from "react";
 import { v4 as uuid } from "uuid";
 
 function ItemForm(props) {
+ 
   return (
-    <form className="NewItem">
+    <form className="NewItem"  onSubmit={props.onItemFormSubmit}>
       <label>
         Name:
-        <input type="text" name="name" />
+        <input 
+          type="text" 
+          name="name" 
+          id="name"
+        />
       </label>
 
       <label>
         Category:
-        <select name="category">
+        <select name="category" id="category" >
           <option value="Produce">Produce</option>
           <option value="Dairy">Dairy</option>
           <option value="Dessert">Dessert</option>
